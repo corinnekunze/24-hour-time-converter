@@ -20,7 +20,7 @@ function activeInput(x) { // Adds an active class onto an input so we know which
 function ConvertTimes() {
 
     var MilitaryReg = byId('first-time').value.match(/^([0-9]{2})\:([0-9]{2})$/);
-    var AmPmReg = byId('second-time').value.match(/^(0?[1-9]|1[012]):([0-5]\d)\s?(?:AM|PM)$/i);
+    var AmPmReg = byId('second-time').value.match(/^(0?[1-9]|1[012])(:[0-5]\d) [APap][mM]$/);
 
     byId('alert').classList.add('hide');
 
@@ -53,8 +53,8 @@ function ConvertTimes() {
             var hours = Number(twelveHour.match(/^(\d+)/)[1]);
             var minutes = Number(twelveHour.match(/:(\d+)/)[1]);
             var AMPM = twelveHour.match(/\s(.*)$/)[1];
-            if (AMPM == "PM" || "pm" && hours < 12) hours = hours + 12;
-            if (AMPM == "AM" || "am" && hours == 12) hours = hours - 12;
+            if ((AMPM == "PM") || (AMPM == "pm") && hours < 12) hours = hours + 12;
+            if ((AMPM == "AM") || (AMPM == "am") && hours == 12) hours = hours - 12;
             var sHours = hours.toString();
             var sMinutes = minutes.toString();
             if (hours < 10) sHours = "0" + sHours;
