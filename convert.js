@@ -1,8 +1,6 @@
-// function InputValidation() {
-//	var re = /^([01]\d|2[0-3]):?([0-5]\d)$/;
-//	var firstTime = document.getElementById("first-time").value;
-//	alert(firstTime.match(re));
-// }
+// 24 Hour Time Converter was a little personal project to learn a little more
+// about javascript without the help of any Jquery. 
+
 
 function byId(id) { // So I don't have to write document.getElementById a million times
     return document.getElementById(id);
