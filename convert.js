@@ -53,8 +53,8 @@ function ConvertTimes() {
             var hours = Number(twelveHour.match(/^(\d+)/)[1]);
             var minutes = Number(twelveHour.match(/:(\d+)/)[1]);
             var AMPM = twelveHour.match(/\s(.*)$/)[1];
-            if ((AMPM == "PM") || (AMPM == "pm") && hours < 12) hours = hours + 12;
-            if ((AMPM == "AM") || (AMPM == "am") && hours == 12) hours = hours - 12;
+            if ((AMPM == "PM" && hours < 12) || (AMPM == "pm" && hours < 12)) hours = hours + 12;
+            if ((AMPM == "AM" && hours == 12) || (AMPM == "am" && hours == 12)) hours = hours - 12;
             var sHours = hours.toString();
             var sMinutes = minutes.toString();
             if (hours < 10) sHours = "0" + sHours;
