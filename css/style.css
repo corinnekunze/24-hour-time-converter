@@ -1,0 +1,15 @@
+h1, h2, h3, h4, h5, label, p {
+	color:white;
+}
+
+body {
+	background-color:#2D3331;
+}
+
+.lgt-margin {
+	margin-top:15px;
+}
+
+.control-label {
+	padding-top:0px !important;
+}
