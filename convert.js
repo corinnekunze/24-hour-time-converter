@@ -18,6 +18,7 @@ function activeInput(x) { // Adds an active class onto an input so we know which
 }
 
 function ConvertTimes() {
+
     var MilitaryReg = byId('first-time').value.match(/^([0-9]{2})\:([0-9]{2})$/);
     var AmPmReg = byId('second-time').value.match(/^(0?[1-9]|1[012]):([0-5]\d)\s?(?:AM|PM)$/i);
 
