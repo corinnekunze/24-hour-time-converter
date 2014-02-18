@@ -33,7 +33,9 @@ function ConvertTimes() {
         	hour = parts[0],
         	minutes = parts[1];
 
-        	if (hour > 12) {
+            if (hour > 24) {
+               byId('alert').classList.remove('hide'); 
+        	} else if (hour > 12) {
                 militaryTime = (hour - 12) + ':' + minutes + ' pm';
             } else if (hour == 0) {
                 militaryTime = 12 + ':' + minutes + ' am';
